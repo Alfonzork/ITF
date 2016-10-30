@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30-10-2016 0:16:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cl.hipertrans.entity.Recorridos" table="recorridos" catalog="hipertrans" optimistic-lock="version">
+        <id name="idRecorrido" type="int">
+            <column name="id_recorrido" />
+            <generator class="assigned" />
+        </id>
+        <property name="numeroRecorrido" type="int">
+            <column name="numero_recorrido" not-null="true" />
+        </property>
+        <property name="comunaOrigen" type="string">
+            <column name="comuna_origen" length="50" not-null="true" />
+        </property>
+        <property name="comunaDestino" type="string">
+            <column name="comuna_destino" length="50" not-null="true" />
+        </property>
+        <property name="cantidadRecorridos" type="int">
+            <column name="cantidad_recorridos" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
